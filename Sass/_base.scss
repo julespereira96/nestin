@@ -1,0 +1,30 @@
+$background-color: #2b3d2d;
+$primary-color-golden: #cc994d;
+$heading-color: #fff;
+$bp-largest: 57.25em; //960px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem=10px,10px/16px=62.5%
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    background-color: $heading-color;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}

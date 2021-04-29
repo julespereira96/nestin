@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Sass/main.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__slideshow">
+        <img
+          class="mySlides"
+          src="images/inner_slider_03.jpg"
+          alt="house_image"
+        />
+        <img
+          class="mySlides"
+          src="images/inner_slider_04.jpg"
+          alt="gallery_image"
+        />
+        <div class="container__slideshow__buttons">
+          <svg class="button_icon" onclick="plusDivs(-1)">
+            <use xlink:href="./images/sprite.svg#icon-long-arrow-left"></use>
+          </svg>
+          <svg class="button_icon" onclick="plusDivs(+1)">
+            <use xlink:href="./images/sprite.svg#icon-long-arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container__info">
+        <h1>03 Bedroom Duplex</h1>
+        <p>
+          Interior of volumes, space, air, proportion, with certain light and
+          mood, meant to last.
+        </p>
+        <ul>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-bed"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">BEDROOM </span>
+              <span class="description__numbers">3</span>
+            </div>
+          </li>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-automobile"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">PARKING </span>
+              <span class="description__numbers">1</span>
+            </div>
+          </li>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-laptop"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">STUDY </span>
+              <span class="description__numbers">1</span>
+            </div>
+          </li>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-bath"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">BATH </span>
+              <span class="description__numbers">3</span>
+            </div>
+          </li>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-automobile"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">PARKING </span>
+              <span class="description__numbers">1</span>
+            </div>
+          </li>
+          <li>
+            <svg class="duplex_icon">
+              <use xlink:href="./images/sprite.svg#icon-sun-o"></use>
+            </svg>
+            <div class="description">
+              <span class="description__gallery">SUNNY SIDE </span>
+              <span class="description__numbers">YES</span>
+            </div>
+          </li>
+        </ul>
+        <div class="button">
+          <input
+            id="formSubmit"
+            class="btn_submit"
+            name="submit"
+            type="submit"
+            value="Download brochure"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
